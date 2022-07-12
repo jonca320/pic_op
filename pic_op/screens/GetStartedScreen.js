@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from 'react';
 import { shareAsync } from 'expo-sharing';
 import * as MediaLibrary from 'expo-media-library'
 
-import ImageFilters, {Utils} from 'react-native-gl-image-filters';
 
 
 export default function GetStartedScreen () {
@@ -34,11 +33,6 @@ if(hasCameraPermission === undefined) {
 return <Text>Permission not granted. </Text>
 }
 
-const MyOwnPreset = Utils.createPreset({
-  brightness: .1,
-  saturation: -.5,
-  sepia: .15,
-}); 
 
 let takePic = async () => {
 let options = {
@@ -73,9 +67,7 @@ if (photo) {
 return (
 
   <SafeAreaView style={styles.container}>
-<ImageFilters {...MyOwnPreset}>
-  {{ uri: 'https://i.imgur.com/5EOyTDQ.jpg' }}
-</ImageFilters>
+
 <Image  style={styles.preview} source =  { {uri: "data:image/jpg;base64," + photo.base64}}/>
 <Button title="Share" onPress={sharePic} />
         {hasMediaPermission ? <Button title="Save" onPress={savePhoto} /> : undefined}
