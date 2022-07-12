@@ -4,6 +4,8 @@ import {Camera} from 'expo-camera';
 import { useEffect, useRef, useState } from 'react';
 import { shareAsync } from 'expo-sharing';
 import * as MediaLibrary from 'expo-media-library'
+import Saturated from "./Saturation.js"
+
 
 
 
@@ -78,6 +80,7 @@ return (
 
 }
   return (
+    
 <Camera style={styles.container} ref={cameraRef}>
 <View style={styles.buttonContainer}>
 
@@ -87,6 +90,8 @@ return (
 style = {styles.photoStyle}/>
 
 </TouchableOpacity>
+<Saturated/>
+
 </View>
 
 
@@ -94,7 +99,9 @@ style = {styles.photoStyle}/>
 </Camera>
 
   )
+  
 }
+
 const styles = StyleSheet.create({
   container: {
   alignItems: 'center',
