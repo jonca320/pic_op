@@ -4,7 +4,6 @@ import {Camera} from 'expo-camera';
 import { useEffect, useRef, useState } from 'react';
 import { shareAsync } from 'expo-sharing';
 import * as MediaLibrary from 'expo-media-library'
-import Saturated from "./Saturation.js"
 
 
 
@@ -90,7 +89,6 @@ return (
 style = {styles.photoStyle}/>
 
 </TouchableOpacity>
-<Saturated/>
 
 </View>
 

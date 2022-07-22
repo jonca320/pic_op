@@ -7,7 +7,7 @@ import { customTheme } from './src/theme';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import AboutScreen from './screens/AboutScreen';
-import GetStartedScreen from './screens/GetStartedScreen';
+import GetStartedScreen from './screens/GetStartedScreen.js';
 import PlaceholderScreen from './screens/PlaceholderScreen';
 
 import Animated, {
